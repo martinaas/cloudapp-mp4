@@ -39,7 +39,7 @@ public class SuperTable{
       admin.createTable(tableDescriptor);
 
       // Instantiating HTable class
-      HTable hTable = new HTable(config, "powers");
+      HTable hTable = new HTable(con, "powers");
 
       // Repeat these steps as many times as necessary
       // Instantiating and saving Put class
@@ -79,7 +79,7 @@ public class SuperTable{
       // Close table
       hTable.close();
 
-      HTable table = new HTable(config, "powers");
+      HTable table = new HTable(con, "powers");
       //	Instantiating	the	Scan	class
       Scan scan = new Scan();
      
